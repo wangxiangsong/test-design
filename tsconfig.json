@@ -9,8 +9,9 @@
     "paths": {
       "@@/*": [".dumi/tmp/*"],
       "test-design": ["src"],
-      "test-design/*": ["src/*", "*"]
+      "test-design/*": ["src/*", "*"],
+      "@/*": ["src/*"]
     }
   },
-  "include": [".dumirc.ts", "src/**/*"]
+  "include": [".dumirc.ts", "src/**/*", "global.d.ts"]
 }

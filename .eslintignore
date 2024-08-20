@@ -1,0 +1,7 @@
+node_modules/*
+.dumi/*
+dist/*
+*.less
+*.css
+*.svg
+*.png

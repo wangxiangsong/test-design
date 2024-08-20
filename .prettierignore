@@ -1,2 +1,8 @@
-/dist
 *.yaml
+node_modules/
+build/
+dist/
+.dumi/tmp
+.dumi/tmp-test
+.dumi/tmp-production
+.DS_Store

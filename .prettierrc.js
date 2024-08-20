@@ -15,5 +15,12 @@ module.exports = {
         proseWrap: 'preserve',
       },
     },
+    {
+      files: '*.tsx',
+      options: {
+        printWidth: 100,
+        // 其他 TypeScript 特定的配置（如需要）
+      },
+    },
   ],
 };
