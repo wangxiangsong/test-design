@@ -1,6 +1,8 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
+  title: 'test-design',
+  favicons: ['/head.png'],
   publicPath: '/test-design/',
 
   outputPath: 'docs-dist', // 文档打包输出路径
@@ -33,7 +35,6 @@ export default defineConfig({
     ],
   ],
 
-  favicons: ['https://your-domain.com/favicon.ico'], // 自定义 favicon 图标
   inlineLimit: 10000, // 文件大小超过10000 才会被打包成文件 否则base64
   hash: true, // 为打包的资源添加 hash，防止缓存
   history: { type: 'hash' }, // 使用 hash 模式的路由
