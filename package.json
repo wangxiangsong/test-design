@@ -56,6 +56,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^8.2.0",
@@ -68,6 +69,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "father": "^4.1.0",
     "husky": "^8.0.1",
+    "less-plugin-functions": "^1.0.0",
     "lint-staged": "^13.0.3",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^3.0.0",
