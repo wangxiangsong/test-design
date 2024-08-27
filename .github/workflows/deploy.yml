@@ -1,22 +1,23 @@
-name: Deploy Dumi Docs
+name: Deploy Dumi Docs # 工作流名称，将在 GitHub Actions 界面上显示
 
 on:
   push:
     branches:
-      - master # 或 main，根据你的默认分支
+      - master # 触发工作流的分支，更新到 master 分支时工作流将被触发
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  deploy: # 作业名称
+    runs-on: ubuntu-latest # 指定运行的虚拟环境，这里是最新的 Ubuntu 版本
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2 # 使用 GitHub Actions 的 checkout 插件来检出代码
+        # 这样可以确保工作流在运行时访问到最新的代码
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v2 # 使用 GitHub Actions 的 setup-node 插件来设置 Node.js 环境
         with:
-          node-version: '16' # 使用你项目的 Node.js 版本
+          node-version: '16' # 指定 Node.js 版本，与你项目中使用的版本一致
 
       - name: Install dependencies
         run: |
@@ -27,7 +28,7 @@ jobs:
           npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3 # 使用 peaceiris 的 actions-gh-pages 插件来部署文档到 GitHub Pages
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # 构建输出目录
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 自动生成的令牌进行身份验证
+          publish_dir: ./docs-dist # 指定要发布的目录，这里是 Dumi 构建输出目录
